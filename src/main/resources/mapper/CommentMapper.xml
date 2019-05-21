@@ -181,7 +181,7 @@
   </update>
 
   <select id="selectAllCommentByArticleId" parameterType="long" resultMap="BaseResultMap">
-    SELECT * FROM comment WHERE article_id = #{articleId} ORDER BY date DESC
+    SELECT * FROM comment WHERE article_id = #{articleId} ORDER BY date ASC
   </select>
 
   <select id="allCommentCount" resultType="integer">

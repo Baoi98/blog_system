@@ -45,11 +45,11 @@
         </article>
     </div>
 
-    <%--<% int i = 1; %>--%>
-    <c:forEach items="${commentList}" var="comment">
+    
+    <c:forEach items="${commentList}" var="comment" varStatus="commentLine">
         <article class="comment" style="font-size: 16px;">
             <section style="text-align:left">
-                ${fn:length(commentList)}楼&nbsp;&nbsp;
+                ${commentLine.index+1}楼&nbsp;&nbsp;
                 ${comment.name}&nbsp;&nbsp;
                 <fmt:formatDate value="${comment.date}" pattern="yyyy-MM-dd HH:mm:ss"/> <br/><br/>
                 <p>${comment.content}</p><br/>
